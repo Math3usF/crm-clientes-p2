@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 
 export default function NaoEncontrada() {
-  const { usuario } = useAuth()
+  const { usuario, carregando } = useAuth()
 
   useEffect(() => {
     document.title = 'Página não encontrada · CRM de clientes'
@@ -17,9 +17,15 @@ export default function NaoEncontrada() {
         <p className="texto-suave">
           O endereço <code>{window.location.pathname}</code> não existe neste CRM.
         </p>
-        <Link className="btn btn-primario" to={usuario ? '/' : '/login'}>
-          {usuario ? 'Ir para o Painel' : 'Ir para o Login'}
-        </Link>
+        {carregando ? (
+          <p className="texto-suave" role="status">
+            Verificando sessão…
+          </p>
+        ) : (
+          <Link className="btn btn-primario" to={usuario ? '/' : '/login'}>
+            {usuario ? 'Ir para o Painel' : 'Ir para o Login'}
+          </Link>
+        )}
       </div>
     </main>
   )
