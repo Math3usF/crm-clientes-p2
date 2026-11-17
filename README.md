@@ -4,6 +4,9 @@ CRM para uma pequena empresa: o atendente entra com login e gerencia **clientes*
 
 Prova prática P2 · 2026.2 · Prof.ª Laís Cristine Bordallo Pinheiro · Universidade de Vassouras.
 
+**Aluno:** Matheus Fernando Cardoso Bezerra
+**Matrícula:** 202523339
+
 > **Repositório:** https://github.com/Math3usF/crm-clientes-p2
 > (o mesmo link vai no AVA)
 
